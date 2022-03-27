@@ -12,4 +12,9 @@ def prever_casos_futuros(novos_casos_covid_csv):
 
     quadro_de_dados_futuro = modelo.make_future_dataframe(periods=4)
     previsao = modelo.predict(quadro_de_dados_futuro)
-    print(previsao)
+    mostrar_previsao(previsao)
+
+
+def mostrar_previsao(previsao):
+    for index, yhat in enumerate(previsao.yhat[-4:]):
+        print(f'{index+1} -> {round(yhat)}')
