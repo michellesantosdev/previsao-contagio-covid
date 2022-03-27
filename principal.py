@@ -2,7 +2,14 @@ from modelo.novos_casos_csv import NovosCasosCovidCsv
 from previsao.profeta import prever_casos_futuros
 
 
+def input_dias():
+    dias = input('Digite um número inteiro de dias para prever : ')
+    while not dias.isnumeric():
+        dias = input('Valor inválido! Digite um número inteiro de dias para prever : ')
+    return int(dias)
+
+
 novos_casos_arquivo_csv = NovosCasosCovidCsv()
 novos_casos_arquivo_csv.preencher_arquivo_csv('new_cases.csv')
-
-prever_casos_futuros(novos_casos_arquivo_csv)
+dias = input_dias()
+prever_casos_futuros(novos_casos_arquivo_csv, dias)
