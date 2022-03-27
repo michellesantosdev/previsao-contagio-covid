@@ -9,8 +9,11 @@ def input_dias():
     return int(dias)
 
 
-novos_casos_arquivo_csv = NovosCasosCovidCsv()
-novos_casos_arquivo_csv.preencher_arquivo_csv('new_cases.csv')
-dias = input_dias()
-previsao = prever_casos_futuros(novos_casos_arquivo_csv, dias)
-print(mostrar_previsao(previsao, dias))
+if __name__ == '__main__':
+    novos_casos_arquivo_csv = NovosCasosCovidCsv()
+    novos_casos_arquivo_csv.preencher_arquivo_csv('new_cases.csv')
+
+    dias = input_dias()
+
+    previsao = prever_casos_futuros(novos_casos_arquivo_csv, dias)
+    print(mostrar_previsao(previsao, dias))

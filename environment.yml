@@ -1,0 +1,8 @@
+name: stats
+dependencies:
+  - pandas
+  - pystan
+  - flake8
+  - pytest
+  - pip:
+    - fbprophet
