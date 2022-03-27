@@ -1,0 +1,2 @@
+# previsao-contagio-covid
+D3 Challenge Sua missão é prever, dado um número de dias, a evolução do contágio por COVID-19 🦠 no mundo. Seu método deve receber um número inteiro (N) que representa a quantidade de dias, e rejeitar qualquer outro tipo de input, sendo:  0 &lt; N  def predict(days=1):     print("do stuff here") O output da sua função precisa dizer o número de dias à frente (calculado por D) e seu respectivo valor de casos.  Dado D=4, teremos:  1 -> 456 2 -> 765 3 -> 40 4 -> 964
